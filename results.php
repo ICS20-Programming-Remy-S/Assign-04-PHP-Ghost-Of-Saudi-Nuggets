@@ -1,6 +1,6 @@
 <?php
   //Declare the value for tax and discount
-  define("TAX_RATE", 0.15);
+  define("TAX_RATE", 1.13);
 
   define("DISCOUNT", 0.05);
 
@@ -27,9 +27,9 @@
 
 	$userSide2 = $_POST['userSide2'];
 
-  $sauceAmount = $_POST['sauceAmount']
+  $sauceAmount = $_POST['sauceAmount'];
     ?>
-
+  
         <?php
 //Statement for the price of nuggets 
 if ($userNuggets == "6pcs nugget") {
@@ -86,9 +86,10 @@ else  {
   $discountedTotal = $total - ($total * DISCOUNT);
 ?>
 
-<?php echo
+
+  <?php echo
   //Data given back to user
   "The subtotal of your order is $" . round($subTotal, 2) . "." .
   "<br>The total amount this order will cost you is $ " . round($total, 2) . "." .
 "<br>The amount of money this will cost you with the discount is $ " . round($discountedTotal, 2) . "."
-?>
+    ?>
