@@ -69,7 +69,7 @@
   "<br>The amount of money spent on your team is " . round($total, 2) . "." .
 "<br>The profit you make from your team is " . round($discountedTotal, 2) . "."
         ?>
-        
+        <!---Text for the ghost of saudi—-->
 	    </iframe>
         <h3>The Ghost of Saudi has been thriving since the world cup which has brought many new customer to our location. Due to the growth in customer we have been able to expand throughout Saudi Arabia and bring more people joy. Dispite, the fact that so many people come here regularly we make sure each time you get great food matched with amazing service. Finally, we provide many great deal on our food like the discounted price if you use our app which you can find on any device.</h3>
     <!---Images--->
