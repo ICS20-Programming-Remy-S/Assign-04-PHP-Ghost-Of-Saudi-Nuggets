@@ -21,9 +21,9 @@
     <!-- php echo to print the html to the page -->
     <?php 
 			echo "<h1>Ghost of Saudi Nuggets</h1>";
-			echo "<h3>Please Enter your order in our online menu below</h3>";
+			echo "<h3>Please Enter your order in our online menu below(if you do not want the item put 0 in amount)</h3>";
 		?>
-		<!--- Average Amount of Fans --->
+		<!--- PHP results and user input --->
         <form action="./results.php" method="post" target="results">
  <label for="userNuggets">Nugget options:</label>
         <select name="userNuggets" id="userNuggets">
@@ -72,6 +72,7 @@
         
 	    </iframe>
         <h3>The Ghost of Saudi has been thriving since the world cup which has brought many new customer to our location. Due to the growth in customer we have been able to expand throughout Saudi Arabia and bring more people joy. Dispite, the fact that so many people come here regularly we make sure each time you get great food matched with amazing service. Finally, we provide many great deal on our food like the discounted price if you use our app which you can find on any device.</h3>
+    <!---Images--->
     <h1>
     <img src="./images/ghostOfSaudi.jpg" width="300" height="300">
     </h1>

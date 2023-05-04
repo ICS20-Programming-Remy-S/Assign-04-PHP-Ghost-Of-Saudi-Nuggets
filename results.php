@@ -30,7 +30,6 @@
 	$userSide2 = $_POST['userSide2'];
 
   $sauceAmount = $_POST['sauceAmount'];
-    
   
         
 //Statement for the price of nuggets 
@@ -82,7 +81,7 @@ else  {
 }
 ?>
       <?php
- if ($userMain == ""){
+ if ($userMain == "" || $userSide1 == "" || $userSide2 == "" || $sauceAmount == ""){
    echo "";
  }
  else{
@@ -96,8 +95,8 @@ else  {
   
   <?php 
   //Data given back to user
-  if ($userMain > 0){
-  echo "your order is " . $userMain . " " . $userNuggets . ", " . $userSide1 . " " .  $userDrink . ", " . $userSide2 . " " . $userFries . ", " . $sauceAmount . " " . $userSauce . " sauce." .
+  if ($userMain > 0 && $userSide1 >= 0 && $userSide2 >= 0 && $sauceAmount >= 0){
+  echo "Your order is " . $userMain . " box(s) of " . $userNuggets . ", " . $userSide1 . " " .  $userDrink . ", " . $userSide2 . " " . $userFries . ", " . $sauceAmount . " " . $userSauce . " sauce." .
     "<br>The subtotal of your order is $" . round($subTotal, 2) . "." .
   "<br>The total amount this order will cost you is $ " . round($total, 2) . "." .
 "<br>The amount of money this will cost you with the discount is $ " . round($discountedTotal, 2) . ".";
