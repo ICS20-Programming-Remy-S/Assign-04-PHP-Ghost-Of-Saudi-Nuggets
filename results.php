@@ -13,6 +13,8 @@
 
   $userFries = $_POST['userFries'];
 
+  $userSauce = $_POST['userSauce'];
+
   //Price for each item
   $nuggetPrice = "";
 
@@ -28,9 +30,9 @@
 	$userSide2 = $_POST['userSide2'];
 
   $sauceAmount = $_POST['sauceAmount'];
-    ?>
+    
   
-        <?php
+        
 //Statement for the price of nuggets 
 if ($userNuggets == "6pcs nugget") {
   $nuggetPrice = 5.99;
@@ -80,16 +82,27 @@ else  {
 }
 ?>
       <?php
+ if ($userMain == ""){
+   echo "";
+ }
+ else{
 	// calculate the amount the user has to pay
   $subTotal = ($nuggetPrice * $userMain) + ($drinkPrice * $userSide1) + ($friesPrice * $userSide2) + (SAUCEPRICE * $sauceAmount);
   $total = $subTotal * TAX_RATE;
   $discountedTotal = $total - ($total * DISCOUNT);
+ }
 ?>
 
-
-  <?php echo
+  
+  <?php 
   //Data given back to user
-  "The subtotal of your order is $" . round($subTotal, 2) . "." .
+  if ($userMain > 0){
+  echo "your order is " . $userMain . " " . $userNuggets . ", " . $userSide1 . " " .  $userDrink . ", " . $userSide2 . " " . $userFries . ", " . $sauceAmount . " " . $userSauce . " sauce." .
+    "<br>The subtotal of your order is $" . round($subTotal, 2) . "." .
   "<br>The total amount this order will cost you is $ " . round($total, 2) . "." .
-"<br>The amount of money this will cost you with the discount is $ " . round($discountedTotal, 2) . "."
+"<br>The amount of money this will cost you with the discount is $ " . round($discountedTotal, 2) . ".";
+    }
+  else{
+    echo "Please enter a valid order.";
+  }
     ?>
